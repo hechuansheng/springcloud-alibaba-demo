@@ -1,0 +1,10 @@
+server:
+  port: 18603
+
+spring:
+  application:
+    name: user-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.88.132:8848
