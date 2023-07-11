@@ -21,3 +21,16 @@ spring:
   config:
     import:
       - nacos:order-service-dev.yaml?refresh=true
+
+
+feign:
+  client:
+    config:
+      default:  #全局
+        logger-level: FULL
+#      user-service:  #单个服务
+#        logger-level: FULL
+logging:
+  level:
+    org:
+      hechuans: debug
