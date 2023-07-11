@@ -2,8 +2,8 @@ package org.hechuans.demo.alibaba.cloud.user.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 
+import org.hechuans.demo.alibaba.cloud.feignapi.pojo.UserVO;
 import org.hechuans.demo.alibaba.cloud.user.service.UserService;
-import org.hechuans.demo.alibaba.cloud.user.vo.UserVO;
 import org.springframework.stereotype.Service;
 
 /**

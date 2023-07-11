@@ -1,4 +1,4 @@
-package org.hechuans.demo.alibaba.cloud.order.vo;
+package org.hechuans.demo.alibaba.cloud.feignapi.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

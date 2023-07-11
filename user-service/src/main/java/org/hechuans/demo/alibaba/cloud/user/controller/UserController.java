@@ -1,8 +1,9 @@
 package org.hechuans.demo.alibaba.cloud.user.controller;
 
 
+import org.hechuans.demo.alibaba.cloud.feignapi.api.UserApi;
+import org.hechuans.demo.alibaba.cloud.feignapi.pojo.UserVO;
 import org.hechuans.demo.alibaba.cloud.user.service.UserService;
-import org.hechuans.demo.alibaba.cloud.user.vo.UserVO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,7 @@ import javax.annotation.Resource;
  */
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class UserController implements UserApi {
 
     @Resource
     private UserService userService;

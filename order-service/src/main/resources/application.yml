@@ -30,6 +30,11 @@ feign:
         logger-level: FULL
 #      user-service:  #单个服务
 #        logger-level: FULL
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
+
 logging:
   level:
     org:

@@ -2,10 +2,10 @@ package org.hechuans.demo.alibaba.cloud.order.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 
-import org.hechuans.demo.alibaba.cloud.order.clients.UserClient;
+import org.hechuans.demo.alibaba.cloud.feignapi.clients.UserClient;
+import org.hechuans.demo.alibaba.cloud.feignapi.pojo.UserVO;
 import org.hechuans.demo.alibaba.cloud.order.service.OrderService;
 import org.hechuans.demo.alibaba.cloud.order.vo.OrderVO;
-import org.hechuans.demo.alibaba.cloud.order.vo.UserVO;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

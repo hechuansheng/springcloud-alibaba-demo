@@ -1,7 +1,7 @@
 package org.hechuans.demo.alibaba.cloud.user.service;
 
 
-import org.hechuans.demo.alibaba.cloud.user.vo.UserVO;
+import org.hechuans.demo.alibaba.cloud.feignapi.pojo.UserVO;
 
 /**
  * @author : hechuansheng

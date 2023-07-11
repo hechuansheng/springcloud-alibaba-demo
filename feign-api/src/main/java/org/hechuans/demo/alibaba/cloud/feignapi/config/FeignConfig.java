@@ -1,5 +1,4 @@
-package org.hechuans.demo.alibaba.cloud.order.config.feign;
-
+package org.hechuans.demo.alibaba.cloud.feignapi.config;
 
 import feign.Logger;
 import org.springframework.context.annotation.Bean;

@@ -2,6 +2,7 @@ package org.hechuans.demo.alibaba.cloud.order.vo;
 
 import lombok.Builder;
 import lombok.Data;
+import org.hechuans.demo.alibaba.cloud.feignapi.pojo.UserVO;
 
 import java.util.Date;
 
