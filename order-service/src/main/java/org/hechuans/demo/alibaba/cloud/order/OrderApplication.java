@@ -2,12 +2,14 @@ package org.hechuans.demo.alibaba.cloud.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author : hechuansheng
  * @date : 2023/6/30 17:23
  * @since : version-1.0
  */
+@EnableFeignClients
 @SpringBootApplication
 public class OrderApplication {
 

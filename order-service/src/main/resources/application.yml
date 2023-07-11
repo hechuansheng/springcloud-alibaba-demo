@@ -4,11 +4,20 @@ server:
 spring:
   application:
     name: order-service
+  profiles:
+    active: dev
   cloud:
     nacos:
+      server-addr: 192.168.88.132:8848
       discovery:
-        server-addr: 192.168.88.132:8848
+#        server-addr: 192.168.88.132:8848
         cluster-name: GZ # 集群名称
         namespace: fcdae902-dd50-4acf-b92c-c18b97794b03 # 命名空间ID，用于环境隔离，最佳实践：dev，test，prod
         group:  order # 分组，通常业务同分组的服务具有强业务相关性
         ephemeral: false # 非临时实例，注册中心主动检测服务健康状况，下线之后注册中心不会自动删除等。
+      config:
+        cluster-name: GZ
+        namespace: fcdae902-dd50-4acf-b92c-c18b97794b03
+  config:
+    import:
+      - nacos:order-service-dev.yaml?refresh=true
