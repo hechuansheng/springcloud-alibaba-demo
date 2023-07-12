@@ -5,9 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.hechuans.demo.alibaba.cloud.order.config.OrderDispatchConfig;
 import org.hechuans.demo.alibaba.cloud.order.service.OrderService;
 import org.hechuans.demo.alibaba.cloud.order.vo.OrderVO;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -28,7 +26,8 @@ public class OrderController {
     private OrderDispatchConfig orderDispatchConfig;
 
     @GetMapping("getById")
-    public OrderVO getById(Integer id) {
+    public OrderVO getById(@RequestParam("id") Integer id, @RequestHeader(value = "custom-auth", required = false) String customAuth) {
+        log.info("custom-auth: {}", customAuth);
         log.info("orderDispatchConfig: {}", orderDispatchConfig);
         return orderService.getOne(id);
     }

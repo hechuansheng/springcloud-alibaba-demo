@@ -12,6 +12,22 @@ spring:
         cluster-name: GZ
         group:  order
     gateway:
+      globalcors:  #全局的跨域外理
+        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题corsConfigurations:/本*]:a11owedOrigins:# 允许哪些网站的跨域请求-"http://localhost:8090http://www.leyou.comallowedMethods:#允许的跨域ajax的请求方式-"GET”
+        cors-configurations:
+          '[/**]':
+            a11owed-origins: # 允许哪些网站的跨域请求
+              - "http://localhost:8090"
+              - "http://www.xxx.com"
+            allowed-methods: #允许的跨域ajax的请求方式
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            a11owed-headers: "*" #允许在请求中携带的头信息
+            al1ow-credentials: true # 是否允许携带cookie
+            max-age: 360000 #这次跨域检测的有效期
       discovery:
         locator:
           enabled: true
@@ -33,3 +49,5 @@ spring:
 #              args:
 #                patterns:
 #                  - /order/**
+      default-filters:
+        - AddRequestHeader=custom-auth,token12345
