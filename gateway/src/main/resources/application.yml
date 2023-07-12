@@ -1,0 +1,35 @@
+server:
+  port: 18600
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: 192.168.88.132:8848
+      discovery:
+        namespace: fcdae902-dd50-4acf-b92c-c18b97794b03
+        cluster-name: GZ
+        group:  order
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - name: Path
+              args:
+                patterns:
+                  - /user/**
+
+        - id: order-service
+#          uri: http://127.0.0.1:18602
+          uri: lb://order-service
+          predicates:
+            - Path=/order/**
+#            - name: Path
+#              args:
+#                patterns:
+#                  - /order/**
