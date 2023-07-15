@@ -1,0 +1,13 @@
+server:
+  port: 18601
+
+spring:
+  application:
+    name: oaa-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.88.132:8848
+        cluster-name: GZ # 集群名称
+        namespace: fcdae902-dd50-4acf-b92c-c18b97794b03 # 命名空间，用于环境隔离
+        group:  order # 分组，通常业务同分组的服务具有强业务相关性
