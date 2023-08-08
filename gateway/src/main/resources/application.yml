@@ -49,5 +49,9 @@ spring:
 #              args:
 #                patterns:
 #                  - /order/**
+        - id: uaa-server
+          uri: lb://uaa-server
+          predicates:
+            - Path=/oauth2/**
       default-filters:
         - AddRequestHeader=custom-auth,token12345
