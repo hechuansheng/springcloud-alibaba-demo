@@ -57,6 +57,7 @@ public class WebSecurityConfig {
 //                .authenticationEntryPoint(new SimpleAuthenticationEntryPoint())
 //                .jwt()
         ;
+
         return httpSecurity.build();
     }
 
